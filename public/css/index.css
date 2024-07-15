@@ -202,7 +202,7 @@ img {
       rgba(255, 123, 0, 0.001)
     ),
     url("./background.jpg"); */
-  background-image: url("./background.jpg");
+  background-image: url("../img/background.jpg");
 
   background-position: center center;
   background-repeat: no-repeat;
