@@ -374,9 +374,10 @@ img {
 
 .description {
   margin: 20px 0;
-  width: clamp(500px, 100%, 900px);
+  width: clamp(350px, 100%, 900px);
   height: auto;
   padding: 30px;
+  border-radius: 10px;
 
   background: rgb(255, 255, 255, 0.7);
 }
@@ -419,6 +420,15 @@ img {
 
   .nav-bar {
     grid-template-columns: auto auto auto;
+  }
+
+  .description {
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .desc-img {
+    margin-right: 0;
   }
 }
 
