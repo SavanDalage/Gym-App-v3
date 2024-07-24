@@ -216,7 +216,6 @@ img {
   grid-column: 2/4;
   align-content: center;
 
-  color: f76707;
   font-size: 42px;
   text-transform: uppercase;
   margin: 80px 0 40px 20px;
@@ -255,8 +254,8 @@ img {
 }
 
 .testimonial {
-  background: var(--sub-color);
-  border-radius: 8px;
+  background: linear-gradient(135deg, #f76707, #ff9a3d);
+  border-radius: 10px;
   margin: 10px auto;
   padding: 10px;
   width: 90%;
@@ -319,34 +318,7 @@ img {
 
 .in-text-img {
   padding: 10px;
-  animation-timeline: view();
-
-  animation-name: fade-in;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
-  animation-timing-function: linear;
 }
-
-/* @keyframes fade-in {
-  from {
-    scale: 0.8;
-    opacity: 0;
-  }
-  to {
-    scale: 1;
-    opacity: 1;
-  }
-} */
-
-/* .img1 {
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-
-.img2 {
-  grid-column: 2/3;
-  grid-row: 2/3;
-} */
 
 .graphic-section {
   width: 100%;
@@ -361,7 +333,7 @@ img {
 
 .about {
   width: 100%;
-  /* height: 100vh; */
+  height: 100%;
   background-image: url("../img/background.jpg");
 
   background-position: center center;
@@ -391,6 +363,67 @@ img {
 .desc-text {
   font-size: 24px;
   text-wrap: wrap;
+}
+
+/* ****************************** */
+/* STRONA - PROGRAMS */
+/* ****************************** */
+
+.programs {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../img/background.jpg");
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 30px 0;
+  gap: 30px;
+  /* align-items: center; */
+  flex-wrap: wrap;
+}
+
+.program-box {
+  width: clamp(250px, 70%, 400px);
+  min-height: auto;
+  max-height: 400px;
+  background: linear-gradient(135deg, #f76707, #ff9a3d);
+  color: white !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Use gap for spacing between items */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.program-box:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.program-name {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.program-time {
+  font-size: 18px;
+  color: #ffddc1; /* Slightly lighter color */
+}
+
+.program-price-hour {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.program-description {
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 /* ****************************** */
