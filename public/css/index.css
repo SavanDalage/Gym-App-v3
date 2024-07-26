@@ -36,22 +36,6 @@ img {
     top: 0;
     z-index: 1000;
     background-color: white;
-    /* background-color: var(--main-color); */
-    transform-origin: left;
-
-    scale: 0 1;
-    animation: scroll-watcher linear;
-    animation-timeline: scroll();
-  }
-
-  .scroll-watcher1 {
-    height: 5px;
-    width: 100%;
-    position: fixed;
-    top: 5px;
-    z-index: 1000;
-    /* background-color: white; */
-    background-color: var(--main-color);
     transform-origin: left;
 
     scale: 0 1;
@@ -60,12 +44,6 @@ img {
   }
 
   @keyframes scroll-watcher {
-    to {
-      scale: 1 1;
-    }
-  }
-
-  @keyframes scroll-watcher1 {
     to {
       scale: 1 1;
     }
@@ -371,7 +349,7 @@ img {
 
 .programs {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   background-image: url("../img/background.jpg");
 
   background-position: center center;
@@ -382,28 +360,27 @@ img {
   margin: 0 auto;
   padding: 30px 0;
   gap: 30px;
-  /* align-items: center; */
   flex-wrap: wrap;
 }
 
 .program-box {
   width: clamp(250px, 70%, 400px);
-  min-height: auto;
+  height: auto;
   max-height: 400px;
   background: linear-gradient(135deg, #f76707, #ff9a3d);
   color: white !important;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 20px;
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Use gap for spacing between items */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  gap: 15px;
+  transition: scale 0.3s ease;
 }
 
 .program-box:hover {
-  transform: translateY(-10px); /* Slight lift on hover */
+  scale: 1.05;
 }
 
 .program-name {
@@ -413,7 +390,7 @@ img {
 
 .program-time {
   font-size: 18px;
-  color: #ffddc1; /* Slightly lighter color */
+  color: #ffddc1;
 }
 
 .program-price-hour {
@@ -465,7 +442,3 @@ img {
     width: 380px;
   }
 }
-
-/* .change-50 {
-  padding: 5px 20px;
-} */
